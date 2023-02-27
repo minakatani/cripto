@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "670395315581",
+    "project_id": "fleet-cyclist-158718",
+    "storage_bucket": "fleet-cyclist-158718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670395315581:android:934d5add3886535dab0814",
+        "android_client_info": {
+          "package_name": "com.example.cripto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670395315581-s8t1onge9oplp1pikoukskihcne733lu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXjQS5kGPENe7ceJwcAbpHnZpNY9J6ab8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "670395315581-s8t1onge9oplp1pikoukskihcne733lu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

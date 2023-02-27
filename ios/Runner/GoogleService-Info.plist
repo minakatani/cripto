@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>670395315581-akep1mo5v1qtb4aa3e3ivk7m9ak8sk7s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.670395315581-akep1mo5v1qtb4aa3e3ivk7m9ak8sk7s</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBfnLH8QJ9QCgT99cKkdX5I5VSG5u4X-cg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>670395315581</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.cripto</string>
+	<key>PROJECT_ID</key>
+	<string>fleet-cyclist-158718</string>
+	<key>STORAGE_BUCKET</key>
+	<string>fleet-cyclist-158718.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:670395315581:ios:b6eda4c2b58abdf6ab0814</string>
+</dict>
+</plist>
