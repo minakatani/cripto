@@ -19,9 +19,17 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthService()),
-        ChangeNotifierProvider(create: (context) => ContaRepository()),
+        ChangeNotifierProvider(create: (context) => MoedaRepository()),
+        ChangeNotifierProvider(
+            create: (context) => ContaRepository(
+                  moedas: context.read<MoedaRepository>(),
+                )),
         ChangeNotifierProvider(create: (context) => AppSettings()),
-        ChangeNotifierProvider(create: (context) => FavoritasRepository()),
+        ChangeNotifierProvider(
+            create: (context) => FavoritasRepository(
+                  auth: context.read<AuthService>(),
+                  moedas: context.read<MoedaRepository>(),
+                )),
       ],
       child: MeuAplicativo(),
     ),
