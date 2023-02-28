@@ -7,10 +7,10 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class CarteiraPage extends StatefulWidget {
-  CarteiraPage({Key? key}) : super(key: key);
+  const CarteiraPage({Key? key}) : super(key: key);
 
   @override
-  _CarteiraPageState createState() => _CarteiraPageState();
+  State<CarteiraPage> createState() => _CarteiraPageState();
 }
 
 class _CarteiraPageState extends State<CarteiraPage> {
@@ -35,11 +35,11 @@ class _CarteiraPageState extends State<CarteiraPage> {
 
     return Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(top: 48),
+        padding: const EdgeInsets.only(top: 48),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 48, bottom: 8),
               child: Text(
                 'Valor da Carteira',
@@ -50,7 +50,7 @@ class _CarteiraPageState extends State<CarteiraPage> {
             ),
             Text(
               real.format(totalCarteira),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 35,
                 fontWeight: FontWeight.w700,
                 letterSpacing: -1.5,
@@ -123,10 +123,10 @@ class _CarteiraPageState extends State<CarteiraPage> {
 
   loadGrafico() {
     return (conta.saldo <= 0)
-        ? Container(
+        ? SizedBox(
             width: MediaQuery.of(context).size.width,
             height: 200,
-            child: Center(
+            child: const Center(
               child: CircularProgressIndicator(),
             ),
           )
@@ -141,8 +141,11 @@ class _CarteiraPageState extends State<CarteiraPage> {
                     centerSpaceRadius: 120,
                     sections: loadCarteira(),
                     pieTouchData: PieTouchData(
-                      touchCallback: (touch) => setState(() {
-                        index = touch.touchedSection!.touchedSectionIndex;
+                      touchCallback:
+                          (FlTouchEvent touch, PieTouchResponse? response) =>
+                              setState(() {
+                        index =
+                            response?.touchedSection?.touchedSectionIndex ?? 0;
                         setGraficoDados(index);
                       }),
                     ),
@@ -153,14 +156,14 @@ class _CarteiraPageState extends State<CarteiraPage> {
                 children: [
                   Text(
                     graficoLabel,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       color: Colors.teal,
                     ),
                   ),
                   Text(
                     real.format(graficoValor),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 28,
                     ),
                   ),
@@ -182,7 +185,7 @@ class _CarteiraPageState extends State<CarteiraPage> {
         trailing:
             Text(real.format((operacao.moeda.preco * operacao.quantidade))),
       ));
-      widgets.add(Divider());
+      widgets.add(const Divider());
     }
     return Column(
       children: widgets,
