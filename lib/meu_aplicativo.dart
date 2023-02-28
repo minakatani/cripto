@@ -1,3 +1,4 @@
+import 'package:cripto/widgets/auth_check.dart';
 import 'package:flutter/material.dart';
 import 'package:cripto/pages/home_page.dart';
 
@@ -12,7 +13,7 @@ class MeuAplicativo extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: HomePage(),
+      home: AuthCheck(),
     );
   }
 }
