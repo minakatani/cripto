@@ -13,7 +13,7 @@ class MeuAplicativo extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: AuthCheck(),
+      home: HomePage(),
     );
   }
 }

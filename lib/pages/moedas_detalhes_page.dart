@@ -84,6 +84,7 @@ class _MoedasDetalhesPageState extends State<MoedasDetalhesPage> {
                 ],
               ),
             ),
+            getGrafico(),
             (quantidade > 0)
                 ? SizedBox(
                     width: MediaQuery.of(context).size.width,

@@ -1,4 +1,5 @@
 import 'package:cripto/configs/app_settings.dart';
+import 'package:cripto/pages/documentos_page.dart';
 import 'package:cripto/repositories/conta_repository.dart';
 import 'package:cripto/services/auth_service.dart';
 import 'package:flutter/material.dart';
@@ -42,24 +43,41 @@ class _ConfiguracoesPageState extends State<ConfiguracoesPage> {
                   IconButton(onPressed: updateSaldo, icon: Icon(Icons.edit)),
             ),
             Divider(),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 24),
-              child: OutlinedButton(
-                onPressed: () => context.read<AuthService>().logout(),
-                style: OutlinedButton.styleFrom(
-                  primary: Colors.red,
+            ListTile(
+              leading: Icon(Icons.camera_alt),
+              title: Text('Escanear a CNH ou RG'),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DocumentosPage(),
+                  fullscreenDialog: true,
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Text(
-                        'Sair do App',
-                        style: TextStyle(fontSize: 18),
-                      ),
+              ),
+            ),
+            Divider(),
+            Expanded(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 24),
+                  child: OutlinedButton(
+                    onPressed: () => context.read<AuthService>().logout(),
+                    style: OutlinedButton.styleFrom(
+                      primary: Colors.red,
                     ),
-                  ],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(16.0),
+                          child: Text(
+                            'Sair do App',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
